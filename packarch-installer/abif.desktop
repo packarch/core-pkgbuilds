@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Install Packarch (CLI)
+Comment=Command Line Installer For Packarch
+Exec=alacritty --config-file /abif-master/alacritty.yml --title 'Packarch Installer (CLI)' -e sudo /abif-master/abif
+Icon=packarch-red
+Type=Application
+Categories=System;

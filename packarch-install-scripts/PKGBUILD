@@ -1,0 +1,24 @@
+# Maintainer: Fabrice Corraire <antidote1911@gmail.com>
+
+pkgname=packarch-install-scripts
+pkgver=1.0
+pkgrel=1
+pkgdesc='Packarch Install Scripts'
+url="https://github.com/packarch/core-packages"
+arch=('any')
+license=('GPL3')
+
+source=(
+		'chrooted_post_install.sh'
+		'post_install.sh'
+)
+
+sha512sums=('983003ab2bde0cd922731910a6844ebfc2c6af9883617e5bc781242c1460aab7047301fa8de28f6af421a6028597acd76f60213f4e656b19b7ee6a92c59c4dd7'
+            'a5f2bb90dce1cdee75c8c06d27d68d338279da71ea629a93f467adf79f54e1d275a92af6514a30f6bdf53a41393cdd9bd77826341b6764d48a5be7e67794fa2e')
+
+package() {
+	local bin=${pkgdir}/usr/bin
+	
+	install -Dm755 chrooted_post_install.sh 	${bin}/chrooted_post_install.sh
+	install -Dm755 post_install.sh 				${bin}/post_install.sh
+}

@@ -1,0 +1,17 @@
+# Maintainer: Fabrice Corraire <antidote1911@gmail.com>
+
+pkgname="packarch-mirrorlist"
+pkgver=1.0
+pkgrel=1
+pkgdesc='Packarch mirrorlist'
+url="https://github.com/packarch/core-packages"
+arch=('any')
+license=('GPL3')
+
+source=($pkgname)
+
+sha512sums=('d56d202f34294f51104e69fe0f516c769535b98994eb6db16e03094b9d2f335027547ad74554c6cbcc11fe96138f09b81840542788cb5487aae3177b74701446')
+
+package() {
+	install -Dm644 ${pkgname}  ${pkgdir}/etc/pacman.d/${pkgname}
+}
