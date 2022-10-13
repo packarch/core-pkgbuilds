@@ -4,7 +4,7 @@
 ## Distribution Branding Settings
 
 ---
-componentName:  packarch
+componentName:  archcraft
 
 ## Show "Welcome to the Calamares installer for Archcraft." instead?
 welcomeStyleCalamares:   false
@@ -33,13 +33,13 @@ navigation: widget
 
 ## Strings
 strings:
-    productName:         Packarch
-    shortProductName:    Packarch
+    productName:         Archcraft
+    shortProductName:    Archcraft
     #version:             2022.07
     #shortVersion:        22.07
-    versionedName:       Packarch
-    shortVersionedName:  Packarch
-    bootloaderEntryName: Packarch
+    versionedName:       Archcraft
+    shortVersionedName:  Archcraft
+    bootloaderEntryName: Archcraft
     productUrl:          https://archcraft.io
     supportUrl:          https://reddit.com/r/archcraft
     knownIssuesUrl:      https://github.com/archcraft-os/archcraft/issues

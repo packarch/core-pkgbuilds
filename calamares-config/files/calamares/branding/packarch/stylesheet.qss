@@ -38,27 +38,27 @@
 /*------------------------ Welcome Page Buttons ------------------------*/
 
 #aboutButton { 
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/about.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/about.svg);
 }
 
 #debugButton { 
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/about.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/about.svg);
 }
 
 #donateButton { 
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/donate.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/donate.svg);
 }
 
 #supportButton {
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/fourm.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/fourm.svg);
 }
 
 #releaseNotesButton {
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/notes.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/notes.svg);
 }
 
 #knownIssuesButton {
-	qproperty-icon: url(/etc/calamares/branding/packarch/icons/issues.svg);
+	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/issues.svg);
 }
 
 #debugButton,
@@ -119,7 +119,7 @@ QComboBox::drop-down {
     border-bottom-right-radius: 3px;
 }
 QComboBox::down-arrow {
-    image: url(/etc/calamares/branding/packarch/icons/go-down.svg);
+    image: url(/etc/calamares/branding/archcraft/icons/go-down.svg);
 }
 
 /*------------------------ Main App ------------------------*/
