@@ -1,59 +1,60 @@
-# Maintainer: Fabrice Corraire <antidote1911@gmail.com>
+# Maintainer: Aditya Shakya <adi1090x@gmail.com>
 
 pkgname="packarch-hooks"
-pkgver=1.0
-pkgrel=2
-pkgdesc='Pacman hooks for Packarch to fix various system files'
-url="https://github.com/packarch-os/core-packages"
+pkgver=2.0
+pkgrel=0
+pkgdesc='Pacman hooks for Packarch filesystem'
 arch=('any')
 license=('GPL3')
 
 source=(
-		"${pkgname}.hook"
-		"${pkgname}-runner"
-		'packarch-lsb-release.hook'
+		'packarch-hooks.hook'
 		'packarch-os-release.hook'
+		'packarch-lsb-release.hook'
+		'packarch-pixmaps.hook'
 		'packarch-reboot-required.hook'
+		'packarch-hooks-runner'
 		'packarch-reboot-required'
-		'packarch-hook-nm.hook'
-		'packarch-hook-openbox.hook'
-		'packarch-hook-pixmaps.hook'
-		'packarch-hook-thunar.hook'
-		'packarch-hook-zsh.hook'
-		'packarch-hook-grub.hook'
-		'packarch-hooks-misc'
+		'packarch.png'
+		'packarch.svg'
+		'packarch-logo.png'
+		'packarch-logo.svg'
+		'packarch-user.png'
+		'packarch-user.svg'
 )
 
-sha512sums=('2df869fafeb7d0584f25e680f25f492eaa7ecb12ee2cc5df64c0dde36a8fb69c9de089977336fad21fadc9efc54f88e4b6e177cf0541604f1ff6fea4ef8c6894'
-            'b55fa54aea1b7ba6d1989a2c6b1afbca805ce456a131f423009a33c688663ee83a5c224829a15076702385345d1851dac324c06f47a5849e6572c552d3ecfd93'
-            '324b6bd6815657c103c0169f7d3e7fd3a2a904be137aa083948057bd9fd0b74120248264eb09e9c5515c61cdb5860459d5307af0a0fdd8cfef767188d3cf369a'
-            '2c29dd8a8b3e00d57c11d711b12596db0a09af08b156dddf7e7944c4d96c896a2d48b2b68503a38e407816f802cf09f4c272186af9b73e8cc18d3668c1507da8'
-            'de1a5855beb0b0fd12f1531f0f7febae39fa19e892062409027e7cf22be6d3fc26ba381298c81b8dffddd93269665a421d33ca25a9ccb527e64734f56a822a64'
-            '2fbe7bb452c9d279ce2b7a4d714f6e4fcb21a8dbf1e5f1a45940f49699e6f21a89fcf822c7e157e401064e3d6dbd401a96a10826a8eb3b78814fa565933fd843'
-            '0e5d51adec10d2620a7a670bebc45d25b960c6386c5cfedcc9d5a08fc63346044632813078cec65d6fe9e85f9670a29eb7619db7b643263904995287876f3214'
-            '9bee37267095dd6820896f25b7152d001274b001d55ad742cf83ea9d68fe4bb856c740b97bf8007feb30ead1d34860bb1bc5332d8eb915f98bde324eeda24cfb'
-            '68df83b500a450dff1217793ca72fb547515a94ef653579dd6b4cb0af10958b5b28c1381de40af043d1e2db16544a91100cd038f548a11793ff3ef533daede15'
-            'dcc786ef0d2e6b043b2dd17e33b7b45a3c27274663a46243346ddbc7928676b8af4cafc6d8847346d43876be547a261543048eec076cc37cdb1e489853c833f8'
-            '1805ac52ba60b1af3d9872865b0eaed46619fc72527fba821d40fe9149fca3e0edc190bf167f47bd391dafa2a40fdcb0957560ca26bf622ec0dd58140abe00f3'
-            '377c3a12fa1c676bef27fead2bd5a6a5701e315df6099b8a45ac0c5873dfc1c77479d1fdec7d3ac0f5b594c8717d093912530d236262d8163a79bac5f2570be4'
-            '9d10945ffe503620089860ba5f687e35474dcdd9491bc2a63a7e2d51b76c75c8c581f741dc9c74716b44871918ca17313572ad900ec9171a179fec1761b17a5a')
+sha512sums=('bbdd8230c5a44b92ec0ad589a50943e7aec0041bb740cb72a9d831b78bb0fb70a98421fd7af4e5d4f0cc31f6bff4a90238e63cd7c4e8e8ad34771a58c5faf16f'
+            'be1de86a0920900338b35d89d3073831139af2e0db56d95a7e93ce48512eaae423a77a83c8dbbf61fd2edbdc0d9c8ab7a8148b8d7683b9d0e6c0a66f5f9ae9b9'
+            '1edd0d934762e88f99e30a04347b055156bf1f69480c743fea59ed5534ee4d460845e3f1e4e5a757a32081e893b8f01e42352024d18da086e2edfaa1b515c120'
+            '9aa4b944234c295b10b99eba324f997f3c9f5d378426b20612bd1f92591dc25910b9479117df8e14dc6aba17362a1bf6e2d7c92ed862bf3f7ff631712edcc6a6'
+            'e8d024a7cd8f623f96bee0f6650dab971eefddd14f2e71143b1d24e148cb64f7aef84771c40a7e977d6da5b697e4dea9feaaa764a978bed76a6bf853d60c580f'
+            'e475ef129b77a2c1c00efceb2832fcd6dc9bc7afdcb7af5076a95330cb64324c374c62f8993c8a9a6b6094b07dbfa222fb00d625db34909e2053b3f7da7b2ba1'
+            'a825518e13493cf2be7a333dca34dfe4fdeeba295fa5b307d13a9c0880ebece4ab7fd497eac0bba2fbb8c7b6adfe46cd09fa9e278b880a11d8ec9bd88b67afd0'
+            '34ca68054ae537fda636a4613489ca69a88f6b2c2e0e440c535ada47ebed4015f7b751232e30ef5c2c0173a4db7ae0f7e208bcff30d21ca6f3ba6821229be755'
+            '44982dbe314b0f5648ff7bb02bfe05f7edbd1d8a4fd3b3bc580c5f3f9d93bacf5822e5f8e3c24478c17f1004a6fae06339c87fd411e9eebf53e6ee8361e85b2f'
+            'c860b21db8f7574bca349d50e8f0cc53cb92ee10bb69982c13705e031649f64cb86e13e66a229948b7f0f4ff415dc096a35fc2373c63fd0ebd4c85835333710a'
+            '248d2fb8dbfa43f4548734e0a25765e0dbc2deefdde6f506c03a3f5df92fc4936448d021a7d9e84779497eae6acdc1c8f6ba43797b307eac5b74e8362b0d3a3e'
+            'b7040fac592400a2ea276f39e09df6845f5ca056174078d8f99dc8a62393ca51176ff92521e6a95031387829681620ce62b1a1a02b48a6d15116e8a62dcd660d'
+            '3d4d3cba0d7bd2972970c4a1010852cb1c77b7a48b2fe854451c029563a631b455c8c366d1d46e967cfcd7c56962ab527c795eb09bc0527bc82f493557df210e')
 
 package() {
-  local hooks=${pkgdir}/usr/share/libalpm/hooks
-  local bin=${pkgdir}/usr/bin
-
-  install -Dm644 ${pkgname}.hook           			"$hooks"/${pkgname}.hook
-  install -Dm644 packarch-lsb-release.hook      	"$hooks"/packarch-lsb-release.hook
-  install -Dm644 packarch-os-release.hook       	"$hooks"/packarch-os-release.hook
-  install -Dm644 packarch-reboot-required.hook  	"$hooks"/packarch-reboot-required.hook
-  install -Dm644 packarch-hook-nm.hook  			"$hooks"/packarch-hook-nm.hook
-  install -Dm644 packarch-hook-openbox.hook  		"$hooks"/packarch-hook-openbox.hook
-  install -Dm644 packarch-hook-pixmaps.hook  		"$hooks"/packarch-hook-pixmaps.hook
-  install -Dm644 packarch-hook-thunar.hook  		"$hooks"/packarch-hook-thunar.hook
-  install -Dm644 packarch-hook-zsh.hook  			"$hooks"/packarch-hook-zsh.hook
-  install -Dm644 packarch-hook-grub.hook  			"$hooks"/packarch-hook-grub.hook
-
-  install -Dm755 ${pkgname}-runner         			"$bin"/${pkgname}-runner
-  install -Dm755 packarch-reboot-required       	"$bin"/packarch-reboot-required
-  install -Dm755 packarch-hooks-misc       		"$bin"/packarch-hooks-misc
+	local hooks=${pkgdir}/usr/share/libalpm/hooks
+	local pixmaps=${pkgdir}/usr/share/pixmaps
+	local bin=${pkgdir}/usr/bin
+	
+	install -Dm644 packarch-hooks.hook           	"$hooks"/packarch-hooks.hook
+	install -Dm644 packarch-lsb-release.hook      	"$hooks"/packarch-lsb-release.hook
+	install -Dm644 packarch-os-release.hook       	"$hooks"/packarch-os-release.hook
+	install -Dm644 packarch-reboot-required.hook  	"$hooks"/packarch-reboot-required.hook
+	install -Dm644 packarch-pixmaps.hook  			"$hooks"/packarch-pixmaps.hook
+	
+	install -Dm755 packarch-hooks-runner         	"$bin"/packarch-hooks-runner
+	install -Dm755 packarch-reboot-required       	"$bin"/packarch-reboot-required
+	
+	install -Dm755 packarch.png       				"$pixmaps"/packarch.png
+	install -Dm755 packarch.svg       				"$pixmaps"/packarch.svg
+	install -Dm755 packarch-logo.png       		"$pixmaps"/packarch-logo.png
+	install -Dm755 packarch-logo.svg       		"$pixmaps"/packarch-logo.svg
+	install -Dm755 packarch-user.png       		"$pixmaps"/packarch-user.png
+	install -Dm755 packarch-user.svg       		"$pixmaps"/packarch-user.svg
 }
