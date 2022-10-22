@@ -40,10 +40,10 @@ prepare() {
 
 	# modify desktop file
 	sed -i -e 's#Exec=sh.*#Exec=sh -c "/etc/calamares/launch.sh"#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Name=.*#Name=Install Archcraft#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
+	sed -i -e 's#Name=.*#Name=Install Packarch#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 	sed -i -e 's#GenericName=.*#GenericName=System Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Icon=.*#Icon=archcraft-green#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Comment=.*#Comment=Archcraft System Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
+	sed -i -e 's#Icon=.*#Icon=packarch-green#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
+	sed -i -e 's#Comment=.*#Comment=Packarch System Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 
 	# add pkgrelease to patch-version
 	cd ${_pkgname}-${pkgver}

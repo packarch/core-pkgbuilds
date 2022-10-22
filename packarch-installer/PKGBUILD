@@ -1,15 +1,15 @@
-# Maintainer: Fabrice Corraire <antidote1911@gmail.com>
+# Maintainer: Aditya Shakya <adi1090x@gmail.com>
 
 pkgname=packarch-installer
-pkgver=1.0
-pkgrel=1
+pkgver=2.0
+pkgrel=0
 pkgdesc="Command line installer for Packarch for expert users."
-url="https://github.com/packarch/core-packages"
+url="https://github.com/packarch-os/core-packages"
 arch=('any')
 license=('GPL3')
 provides=($pkgname)
 conflicts=($pkgname)
-depends=('alacritty')
+depends=('alacritty' 'dialog')
 
 source=(
 		abif
@@ -25,9 +25,9 @@ source=(
 		russian.trans
 		spanish.trans)
 
-sha256sums=('4b1820092509a9b4c251f62d1fff10f085e91fc9c77820c860ec5dc89fe8b10a'
+sha256sums=('7ee5e548608ce1c54acdc9e9ed551a4967d074d883b8d73ee48d98375bb73190'
             'c95b18488460e39c85e6459f9c13435a52d177606f0d9abe5bb7147cd6f6dca1'
-            'a4dcefc3e92bc9c177d83e90d7840e616725a2e2128e90452203df309539a27d'
+            '9718599f2548af6f000068268c51c8fe6f57992fea2bad5ad25fbe170a316021'
             '62fbb7fa46bc724bf1a2de88361e8257503551ab0b472643ce9cdddd1079185f'
             'ba09d0b9a6ad3ef03a1db11006572e4d6e8807348286817003efc7761b4fcae6'
             'ba58c00b7b026fa1cee1fdcf592549a6ad88e795d0120cd67861c0dddfd2aff1'
